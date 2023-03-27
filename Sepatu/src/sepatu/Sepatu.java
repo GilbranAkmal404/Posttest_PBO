@@ -4,98 +4,57 @@
  */
 package sepatu;
 
-/**
- *
- * @author TUF-GK
- */
-import java.util.ArrayList;
-import java.util.Scanner;
+public class Sepatu {
+    protected String jenisSepatu;
+    protected String merk;
+    protected int ukuran;
+    protected int harga;
 
-class Sepatu {
-    private String merek;
-    private int ukuran;
-    private String warna;
-    
-    public Sepatu(String merek, int ukuran, String warna) {
-        this.merek = merek;
+    public Sepatu(String jenisSepatu, String merk, int ukuran, int harga) {
+        this.jenisSepatu = jenisSepatu;
+        this.merk = merk;
         this.ukuran = ukuran;
-        this.warna = warna;
+        this.harga = harga;
     }
-    
-    public String getMerek() {
-        return merek;
+
+    public String getJenisSepatu() {
+        return jenisSepatu;
     }
-    
-    public void setMerek(String merek) {
-        this.merek = merek;
+
+    public String getMerk() {
+        return merk;
     }
-    
+
     public int getUkuran() {
         return ukuran;
     }
-    
+
+    public int getHarga() {
+        return harga;
+    }
+
+    public void setJenisSepatu(String jenisSepatu) {
+        this.jenisSepatu = jenisSepatu;
+    }
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
     public void setUkuran(int ukuran) {
         this.ukuran = ukuran;
     }
-    
-    public String getWarna() {
-        return warna;
+
+    public void setHarga(int harga) {
+        this.harga = harga;
     }
-    
-    public void setWarna(String warna) {
-        this.warna = warna;
-    }
-    
-    public void info() {
-        System.out.println("Merek: " + merek);
-        System.out.println("Ukuran: " + ukuran);
-        System.out.println("Warna: " + warna);
+
+    public void displayInfo() {
+        System.out.println("Jenis Sepatu: " + jenisSepatu);
+        System.out.println("Merk        : " + merk);
+        System.out.println("Ukuran      : " + ukuran);
+        System.out.println("Harga       : " + harga);
     }
 }
-
-class Sneakers extends Sepatu {
-    private String jenisSol;
-    
-    public Sneakers(String merek, int ukuran, String warna, String jenisSol) {
-        super(merek, ukuran, warna);
-        this.jenisSol = jenisSol;
-    }
-    
-    public String getJenisSol() {
-        return jenisSol;
-    }
-    
-    public void setJenisSol(String jenisSol) {
-        this.jenisSol = jenisSol;
-    }
-    
-    public void info() {
-        super.info();
-        System.out.println("Jenis sol: " + jenisSol);
-    }
-}
-
-class Boots extends Sepatu {
-    private String bahan;
-    
-    public Boots(String merek, int ukuran, String warna, String bahan) {
-        super(merek, ukuran, warna);
-        this.bahan = bahan;
-    }
-    
-    public String getBahan() {
-        return bahan;
-    }
-    
-    public void setBahan(String bahan) {
-        this.bahan = bahan;
-    }
-    
-    public void info() {
-        super.info();
-        System.out.println("Bahan: " + bahan);
-    }
-}
-
 
 
